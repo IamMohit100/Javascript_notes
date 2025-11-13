@@ -39,7 +39,27 @@ Later versions: ES7, ES8, … add modern features each year.
 
 You can run JavaScript in two main environments:
 
-In a Web Browser (Client-side)
+1. In a Web Browser (Client-side)
 Every browser (Chrome, Firefox, Edge, etc.) has a built-in JS engine.
 
 You can run JS: inside html file
+<script>
+  console.log("Hello JavaScript");
+</script>
+Or link an external file: 
+<script src="script.js"></script>
+2. In Node.js (Server-side)
+
+Install Node.js → https://nodejs.org
+
+Save code in app.js file, then run:
+node app.js
+Output appears in terminal.
+Q4. Difference between var, let, and const
+Feature               	var	                                                   let	                                                              const
+scope                 	Function-scoped                                   	Block-scoped          	                                           Block-scoped
+Re-declaration	        ✅ Allowed	                                     ❌ Not allowed           	                                          ❌ Not allowed
+Re-assignment	          ✅ Allowed                                     	✅ Allowed	                                                        ❌ Not allowed
+Hoisting	              ✅ Hoisted (initialized as undefined)	            ✅ Hoisted (not initialized → Temporal Dead Zone)	          ✅ Hoisted (not initialized → Temporal Dead Zone)
+Use Case	              Older JS code                                   	When value changes                                               	When value is fixed
+
