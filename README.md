@@ -202,6 +202,103 @@ function showName() {
 console.log(name); // ✅ Accessible here too
 showName();
 
+#Q9. Define typecasting in javascript?
+
+Type casting (also called type conversion) means changing one data type to another.
+JavaScript does type conversion in two ways:
+
+1. Implicit Type Casting (Automatic)/Type coercion
+
+JavaScript automatically converts data types when needed.
+
+Example:
+let result = "5" + 2; 
+Here "5" becomes a string so 2 is also converted to string →
+Output: "52"
+Another example:
+"10" - 2
+"10" becomes a number → result: 8
+This automatic conversion is called implicit coercion.
+
+2. Explicit Type Casting (Manual)/ Type conversion
+You manually convert data using built-in functions.
+
+➤ To Number
+Number("10")     // 10
+parseInt("10")   // 10
+parseFloat("10.5") // 10.5
+
+➤ To String
+String(20)     // "20"
+(20).toString() // "20"
+
+➤ To Boolean
+Boolean(1)   // true
+Boolean(0)   // false
+Boolean("")  // false
+Boolean("hi") // true
+
+
+Rule for implicit type casting / type coercion
+
+✅ Rule 1: If the + operator is used and ANY operand is a string → convert EVERYTHING to string
+
+Because + can do both:
+
+Addition
+
+String concatenation
+
+So JS plays safe → String wins.
+
+Example:
+"5" + 2
+
+
+Here one operand is a string, so JS assumes string concatenation → "52"
+
+2 + "5"
+
+
+Same → "25"
+
+✔ This means:
+If string + anything → result is string
+
+✅ Rule 2: For all other arithmetic operators (-, *, /, %) → convert strings to numbers
+
+Because these operators only work with numbers.
+
+Examples:
+"10" - 2   // 8   (string → number)
+"6" * "3"  // 18  (both → numbers)
+"20" / 5   // 4
+
+
+✔ This means:
+If JavaScript sees an arithmetic operation that needs numbers → it converts to Number.
+
+✅ Rule 3: In comparisons (==) JS tries to convert both sides to numbers
+
+Example:
+
+"5" == 5   // true
+true == 1  // true
+false == 0 // true
+
+
+✔ JS first tries to convert both values into numbers.
+
+✅ Rule 4: In Boolean context → values are converted to Boolean
+
+Example:
+
+if ("hello") { }   // true
+if ("") { }        // false
+if (0) { }         // false
+if (1) { }         // true
+
+
             
 
            
