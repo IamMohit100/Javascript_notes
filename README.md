@@ -55,6 +55,8 @@ Install Node.js → https://nodejs.org
 Save code in app.js file, then run:
 node app.js
 Output appears in terminal.
+
+
 #Q4. Difference between var, let, and const
 Feature               	var	                                                   let	                                                              const
 scope                 	Function-scoped                                   	Block-scoped          	                                           Block-scoped
@@ -72,6 +74,8 @@ How jaavascript interperter see:- //hoisting
                                   var a;
                                   console.log(a);
                                   var a = 5;
+
+                                  
 #Q6. Variable Naming Rules?
   Must start with
 → a letter (a–z or A–Z), underscore (_), or dollar sign ($)
