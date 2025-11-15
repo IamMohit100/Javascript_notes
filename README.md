@@ -202,7 +202,131 @@ function showName() {
 console.log(name); // ✅ Accessible here too
 showName();
 
-#Q9. Define typecasting in javascript?
+
+#Q9. Data types in javascript?
+
+A data type in JavaScript is a classification that tells what kind of value a variable can store and what operations can be performed on that value.
+
+In simple words:
+
+👉 Data type defines the type/nature of data stored in a variable.
+Example: number, string, boolean, object, etc.
+JavaScript has 8 data types — 7 primitive and 1 non-primitive.
+
+✅ Primitive Data Types (Immutable)
+
+Number
+Represents numeric values (integer + floating point).
+
+let age = 20;
+
+
+String
+Sequence of characters.
+
+let name = "Mohit";
+
+
+Boolean
+True or false.
+
+let isLoggedIn = true;
+
+
+Undefined
+Variable declared but not assigned.
+
+let x; // undefined
+
+
+Null
+Intentional empty value.
+
+let data = null;
+
+
+Symbol (ES6)
+Unique and immutable value (mostly for object keys).
+
+let id = Symbol("unique");
+
+
+BigInt
+For integers larger than Number limit.
+
+let big = 123456789012345678901n;
+
+✅ Non-Primitive Data Type
+
+Object
+Collection of key–value pairs.
+Includes: Array, Function, Date, RegExp, etc.
+
+let user = { name: "Mohit", age: 20 };
+let arr = [1, 2, 3];
+function test() {}
+
+
+
+#10.Object and typeof operator in javascript?
+
+1. Object (JavaScript)
+
+An object in JavaScript is a non-primitive data type used to store data in the form of key–value pairs.
+
+👉 In simple words:
+Object = collection of related data and functions.
+
+Example:
+
+let user = {
+  name: "Mohit",
+  age: 21,
+  greet: function () {
+    console.log("Hello!");
+  }
+};
+
+
+Key points:
+
+Objects are mutable.
+
+Keys are strings/symbols, values can be any data type.
+
+Arrays, functions, dates — all are special types of objects.
+
+2. typeof Operator
+
+The typeof operator is used to check the data type of a value or variable.
+
+Syntax:
+
+typeof variable
+
+
+Example:
+
+typeof 10       // "number"
+typeof "Mohit"  // "string"
+typeof true     // "boolean"
+typeof {}       // "object"
+typeof []       // "object" (because array is an object)
+typeof null     // "object" (JavaScript bug)
+typeof undefined // "undefined"
+
+
+Key Points:
+
+Helps in debugging and type-checking.
+
+For arrays and null, it returns "object" (important interview point).
+
+#Q12.Built-in object in javascript?
+
+
+
+#Q13. Define typecasting in javascript?
 
 Type casting (also called type conversion) means changing one data type to another.
 JavaScript does type conversion in two ways:
@@ -297,6 +421,150 @@ if ("hello") { }   // true
 if ("") { }        // false
 if (0) { }         // false
 if (1) { }         // true
+
+
+#Q14. Data structure in javascript?
+
+A data structure is a way of organizing and storing data so it can be used efficiently.
+In simple words:
+👉 Data ko store, manage, and access karne ka tarika = Data Structure
+
+JavaScript supports both built-in and custom data structures.
+
+✅ 1. Primitive Data Structures (Single value)
+
+These are basic data types:
+
+Number
+
+String
+
+Boolean
+
+Null
+
+Undefined
+
+Symbol
+
+BigInt
+
+They store one value at a time.
+
+✅ 2. Non-Primitive / Complex Data Structures
+a) Object
+
+Stores data as key–value pairs.
+Most important DS in JavaScript.
+
+let user = { name: "Mohit", age: 21 };
+
+⭐ Built-in Data Structures (Most important)
+1. Array
+
+Ordered list of items (index-based).
+
+let arr = [10, 20, 30];
+
+2. Object
+
+Collection of key–value pairs.
+
+let person = { name: "Mohit", age: 21 };
+
+3. Map (ES6)
+
+Stores key–value pairs but keys can be any type (object, function, number).
+
+let map = new Map();
+map.set("name", "Mohit");
+
+4. Set (ES6)
+
+Stores unique values only.
+
+let set = new Set([1, 2, 2, 3]); // {1,2,3}
+
+5. WeakMap
+
+Like Map but keys must be objects only.
+
+6. WeakSet
+
+Like Set but stores objects only.
+
+⭐ Additional Data Structures (via Objects/Arrays)
+
+JavaScript allows you to implement your own DS using arrays/objects:
+
+Stack (LIFO)
+
+Queue (FIFO)
+
+Linked List
+
+Tree
+
+Graph
+
+Hash Table
+
+These are not built-in but can be created using JavaScript code.
+
+What is a Keyed Collection in JavaScript?
+
+A keyed collection is a type of data structure that stores data in the form of key–value pairs, where each value is accessed using a key.
+
+In simple words:
+👉 A collection where every value has a key attached to it.
+
+structred data in javascript:-
+
+Structured data is data that is organized in a fixed, well-defined format — usually in tables, rows, columns, or key–value formats — so it is easy to store, search, and process.
+
+In simple words:
+👉 Data that has a proper structure (organized format).
+
+⭐ Easy Examples (to understand)
+✔ Example 1 — Table format (most common)
+Name	Age	City
+Mohit	21	Delhi
+
+This is structured because:
+
+Every row has same type of data
+
+Every column has a defined meaning
+
+Easy to search and filter
+
+✔ Example 2 — JSON (JavaScript Structured Data)
+{
+  "name": "Mohit",
+  "age": 21,
+  "city": "Delhi"
+}
+
+
+Here:
+
+Keys are fixed
+
+Values follow a pattern
+
+Data is easy to parse
+
+⭐ Common Formats of Structured Data
+
+Tables (like SQL databases)
+
+Spreadsheets (Excel, Google Sheets)
+
+JSON
+
+CSV
+
+Key–value pairs
 
 
             
