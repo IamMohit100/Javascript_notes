@@ -324,6 +324,50 @@ For arrays and null, it returns "object" (important interview point).
 
 #Q12.Built-in object in javascript?
 
+Simple definition
+
+Built-in objects are objects that come pre-created with JavaScript and provide ready-made methods and properties to make coding easier.
+
+⭐ Examples of Built-in Objects
+1. Math
+
+Used for mathematical operations.
+
+Math.PI;
+Math.random();
+Math.sqrt(25);
+
+2. Date
+
+Used to work with dates and time.
+
+let now = new Date();
+
+3. String
+
+Provides methods for string manipulation.
+
+"mohit".toUpperCase();
+
+4. Array
+
+Provides tools to work with lists.
+
+[1, 2, 3].push(4);
+
+5. JSON
+
+Used to convert objects ↔ strings.
+
+JSON.stringify({a:1});
+
+⭐ Easy Real-life Example
+
+Just like your phone comes with built-in apps (Calculator, Clock, Camera),
+JavaScript comes with built-in objects (Math, Date, String, Array).
+
+You don’t create them — you simply use them.
+
 
 
 #Q13. Define typecasting in javascript?
