@@ -645,6 +645,64 @@ let nums = new Int16Array(3);
 nums[0] = 100;
 console.log(nums[0]); // 100
 
+#Q15. Equality comparision in javascript?
+
+Full Definition
+
+Equality comparison in JavaScript determines whether two operands represent the same value.
+JavaScript uses three main ways to compare values:
+
+
+1. == (Loose Equality)
+✔ Compares values only
+✔ Performs type coercion
+
+JavaScript tries to convert both values to the same type before comparison.
+
+Examples:
+
+5 == "5"        // true
+0 == false      // true
+null == undefined // true
+" " == 0        // true
+
+❌ Problem
+
+Unpredictable because of automatic type conversion.
+
+2. === (Strict Equality)
+✔ Compares value + type
+✔ No type coercion (recommended)
+
+Examples:
+
+5 === "5"        // false
+0 === false      // false
+null === undefined // false
+
+✔ Predictable
+
+Used in real-world code almost everywhere.
+
+3. Object.is()
+✔ Compares value + type (like ===)
+BUT fixes two special cases where === behaves strangely.
+Special differences:
+Case 1: +0 vs -0
++0 === -0          // true  (JavaScript treats them equal)
+Object.is(+0, -0)  // false (correctly differentiates)
+
+Case 2: NaN comparison
+NaN === NaN         // false  (weird behavior)
+Object.is(NaN, NaN) // true   (correct)
+
+Otherwise:
+Object.is(5, 5) === true
+Object.is("a", "a") === true
+Object.is({}, {}) === false (reference)
+
+
+
 
             
 
