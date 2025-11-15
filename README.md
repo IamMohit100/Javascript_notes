@@ -610,6 +610,41 @@ CSV
 
 Key–value pairs
 
+#Q14. Indexed Collection in JavaScript?
+
+Indexed Collections are data structures in JavaScript where elements are stored and accessed using numeric indexes (0, 1, 2, ...).
+These indexes represent the position of elements in the collection.
+
+JavaScript provides two main indexed collections:
+
+1. Array
+
+Ordered list of values.
+
+Each value is accessed using a zero-based index.
+
+Can store mixed data types (number, string, object, etc.).
+
+Arrays are mutable.
+
+Example:
+let arr = [10, "Hello", true];
+console.log(arr[0]); // 10
+
+2. TypedArray (Typed Arrays)
+
+Introduced for handling binary data (e.g., images, audio buffers).
+
+Stores data in a fixed size, with specific numeric type
+like Int8Array, Float32Array, etc.
+
+Faster and used when interacting with WebGL, buffer APIs, etc.
+
+Example:
+let nums = new Int16Array(3);
+nums[0] = 100;
+console.log(nums[0]); // 100
+
 
             
 
